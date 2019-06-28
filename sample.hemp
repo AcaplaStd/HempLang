@@ -1,0 +1,20 @@
+; This is a sample program in HempLang programming language
+; It prints digits from 0 to 9
+; (C) 2019 Acapla Studios
+
+
+#16bit; it's 16-bit program
+
+byte s = '0$'; define string
+block {
+	do print
+	s += 1; increment counter
+}
+@asm print {; this is an assembly code to print a string with DOS
+	mov dx, s
+	mov ah, 9
+	int 21h
+}
+
+MAIN:; program will start here
+do block while s < ':'; call block a few times
